@@ -201,6 +201,8 @@ Read the linked `README.md` inside each folder before you start coding there.
 
 → See [`docs/README.md`](./docs/README.md)
 
+→ See the [security and privacy guide](./docs/security-and-privacy.md) (Spanish)
+
 ### `infra/` — infrastructure and deployment
 
 **Purpose:** How the company project runs in Docker, cloud, or CI.
