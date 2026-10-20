@@ -201,6 +201,8 @@ Lee el `README.md` enlazado dentro de cada carpeta antes de empezar a programar 
 
 → Ver [`docs/README.md`](./docs/README.md)
 
+→ Ver [Seguridad y privacidad](./docs/security-and-privacy.md)
+
 ### `infra/` — infraestructura y despliegue
 
 **Propósito:** Cómo corre el proyecto en Docker, cloud o CI.
