@@ -57,6 +57,27 @@ You are building **one company** across many milestones and projects. Each top-l
 > - There is no root `AGENTS.md` yet.
 > - Shared package metadata exists in `packages/shared/package.json` (`@repo/shared-types`), but no workspace runner is configured at root.
 
+## HealthCore website prototype: privacy and security
+
+The patient enquiry form is a demo with simulated submission. Do not enter real patient information. The prototype must not transmit or persist form data, including in browser storage. Its success message must not imply that a real enquiry was received.
+
+Before using the form with patients, HealthCore must review and implement appropriate safeguards, including:
+
+- **Transport:** use HTTPS/TLS across the entire site and any submission endpoint.
+- **Storage:** encrypt sensitive data at rest, including backups, and protect encryption keys.
+- **Access and exposure:** apply least-privilege access; keep health information out of URLs, logs, and analytics; mask sensitive values in staff-facing views where appropriate. Masking does not replace encryption.
+- **Retention:** define and document retention and deletion periods.
+- **Providers:** review processors that handle the data, their security, required agreements, and any international data transfers.
+- **Privacy notice and consent:** provide a bilingual privacy notice and a separate, clear contact consent. Consent wording alone does not establish every required legal basis or make the processing compliant.
+
+The privacy and security design must be reviewed by HealthCore's privacy and security owners for applicable requirements, including HIPAA and UK GDPR, before real patient data is collected.
+
+## Lighthouse snapshot
+
+Local mobile Lighthouse audit of the landing page, captured on 2026-10-29 with Chrome for Testing. Scores: Performance 90, Accessibility 100, Best Practices 96, and SEO 100. This is a lab result, not PageSpeed Insights field data.
+
+![Local mobile Lighthouse report for the HealthCore landing page](./docs/lighthouse-mobile.png)
+
 ---
 
 ## Folder guide — what goes where

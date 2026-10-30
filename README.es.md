@@ -57,6 +57,27 @@ Estás construyendo **una sola empresa** a lo largo de muchos hitos y proyectos.
 > - No existe todavía un `AGENTS.md` en la raíz.
 > - Existe metadata del paquete compartido en `packages/shared/package.json` (`@repo/shared-types`), pero aún no hay runner de workspace en raíz.
 
+## Privacidad y seguridad del prototipo web de HealthCore
+
+El formulario de consulta de pacientes es una demo con envío simulado. No introduzcas datos reales de pacientes. El prototipo no debe transmitir ni guardar los datos del formulario, tampoco en el almacenamiento del navegador. El mensaje de éxito no debe dar a entender que se recibió una consulta real.
+
+Antes de usar el formulario con pacientes, HealthCore debe revisar e implementar las salvaguardas apropiadas, entre ellas:
+
+- **Transporte:** usar HTTPS/TLS en todo el sitio y en cualquier endpoint de envío.
+- **Almacenamiento:** cifrar los datos sensibles en reposo, incluidas las copias de seguridad, y proteger las claves de cifrado.
+- **Acceso y exposición:** aplicar acceso de mínimo privilegio; evitar que la información de salud aparezca en URLs, logs o analítica; enmascarar datos sensibles en las vistas del personal cuando corresponda. El enmascaramiento no sustituye al cifrado.
+- **Retención:** definir y documentar los plazos de conservación y eliminación.
+- **Proveedores:** revisar a los encargados que procesen los datos, su seguridad, los acuerdos necesarios y cualquier transferencia internacional.
+- **Aviso de privacidad y consentimiento:** ofrecer un aviso de privacidad bilingüe y un consentimiento de contacto separado y claro. El texto del consentimiento, por sí solo, no establece todas las bases legales necesarias ni garantiza el cumplimiento.
+
+Antes de recopilar datos reales de pacientes, los responsables de privacidad y seguridad de HealthCore deben revisar el diseño según los requisitos aplicables, incluidos HIPAA y UK GDPR.
+
+## Captura de Lighthouse
+
+Auditoría Lighthouse local en móvil de la landing, capturada el 2026-10-29 con Chrome for Testing. Puntuaciones: Rendimiento 90, Accesibilidad 100, Buenas prácticas 96 y SEO 100. Es una medición de laboratorio, no datos de campo de PageSpeed Insights.
+
+![Informe local Lighthouse móvil de la landing de HealthCore](./docs/lighthouse-mobile.png)
+
 ---
 
 ## Guía de carpetas — qué va en cada una
